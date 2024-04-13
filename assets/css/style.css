@@ -876,7 +876,7 @@ div.swiper-button-next:after {
 }
 
 #basket_menu.active{
- transform: translateX(-140%);
+ transform: translateX(-0%);
 }
 
 .basket_menu__closer {
