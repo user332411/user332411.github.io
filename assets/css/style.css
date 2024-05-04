@@ -251,16 +251,17 @@ div.swiper-button-next:after {
   display: flex;
   padding: 60px 0;
 }
+
 @media (max-width:600px) {
-  #mainbanner .swiper .swiper-slide{
+  #mainbanner .swiper .swiper-slide {
     flex-direction: column;
     display: flex;
   }
 
-#mainbanner .swiper .swiper-slide {
+  #mainbanner .swiper .swiper-slide {
     display: flex;
     flex-direction: column;
-}
+  }
 }
 
 #mainbanner .swiper {
@@ -946,7 +947,7 @@ img.banner_kamenicon {
 .basket_menu__goods {
   width: 350px;
   height: 400px;
-  background-color: #878794;
+  background-color: #c0a9c2;
 }
 
 .basket_menu__bottom {

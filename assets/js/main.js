@@ -106,13 +106,13 @@ let mobile_menu = document.querySelector('.mobile_menu');
 let closer = document.querySelector('.mobile_menu .closer');
 
 burger.addEventListener('click', () => {
-    burger.classList.toggle('active');
-    mobile_menu.classList.toggle('active');
-  }
+  burger.classList.toggle('active');
+  mobile_menu.classList.toggle('active');
+}
 );
 closer.addEventListener('click', () => {
-    burger.classList.toggle('active');
-    mobile_menu.classList.toggle('active');
+  burger.classList.toggle('active');
+  mobile_menu.classList.toggle('active');
 });
 
 
@@ -121,13 +121,13 @@ let basketMenu = document.querySelector('.basket_menu');
 let closer2 = document.querySelector('.basket_menu__closer');
 
 basket.addEventListener('click', () => {
-   basket.classList.toggle('active');
-   basket_menu.classList.toggle('active');
-}
-);
+  basket.classList.toggle('active');
+  basketMenu.classList.toggle('active');
+});
+
 closer2.addEventListener('click', () => {
   basket.classList.toggle('active');
-  basket_menu.classList.toggle('active');
+  basketMenu.classList.toggle('active');
 }
 );
 
@@ -139,3 +139,37 @@ closer2.addEventListener('click', () => {
 //     burger.classList.remove('active');
 //     )}
 //  burger.classList.add('active');
+
+
+
+
+
+var products = document.querySelectorAll('.card__buy');
+let products_area = document.querySelector('.basket_menu__goods');
+let count = document.querySelector('.bottom_price__number');
+
+products.forEach((product) => {
+  product.addEventListener('click', () => {
+
+    basketMenu.classList.add('active');
+    basketMenu.classList.add('active');
+
+    let title = product.parentElement.querySelector('.card__title').innerHTML;
+    let price = product.parentElement.querySelector('.card__price').innerHTML;
+
+    console.log(title);
+    console.log(price);
+
+    let div = document.createElement('div');
+    div.className = "product-info";
+    div.innerHTML = `<span class='product-title'>${title}</span> <span class='product-price'>${price}</span>`
+    products_area.append(div);
+    
+    
+    /* стоимость */
+    let current_price = count.innerHTML;
+    let sum = Number(current_price) + Number(price.replace(/\s+/g, ''));
+    count.innerHTML = sum;
+  })
+})
+
